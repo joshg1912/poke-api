@@ -15,7 +15,7 @@ console.log(sprite["red-blue"].front_default);
 
 document.getElementById("tauros").innerHTML = `<img src=${sprite["red-blue"].front_default}>`;
 document.getElementById("name").innerHTML = name;
-document.getElementById("taurosNumber").innerHTML = id;
+document.getElementById("taurosNumber").innerHTML = "No: " + id;
 }
 
 fetch("https://pokeapi.co/api/v2/pokemon/muk").then((response) => response.json()).then(data => {
@@ -30,7 +30,7 @@ function displayMuk(data) {
 
 document.getElementById("muk").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
 document.getElementById("name2").innerHTML = name;
-document.getElementById("mukNumber").innerHTML = id; 
+document.getElementById("mukNumber").innerHTML = "No: " + id; 
 }
 
 fetch("https://pokeapi.co/api/v2/pokemon/gyarados").then((response) => response.json()).then(data => {
@@ -45,7 +45,7 @@ const sprite = data.sprites.versions["generation-i"];
 
 document.getElementById("gyarados").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
 document.getElementById("name3").innerHTML = name;
-document.getElementById("gyaradosNumber").innerHTML = number;
+document.getElementById("gyaradosNumber").innerHTML = "No: " + number;
 };
 
 fetch("https://pokeapi.co/api/v2/pokemon/arcanine").then((response) => response.json()).then(data => {
@@ -60,22 +60,22 @@ function displayArcanine(data){
 
     document.getElementById("arcanine").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
     document.getElementById("name4").innerHTML = name;
-    document.getElementById("arcanineNumber").innerHTML = number;
+    document.getElementById("arcanineNumber").innerHTML = "No: " + number;
 }
 
 
 fetch("https://pokeapi.co/api/v2/pokemon/zapdos").then((response) => response.json()).then(data => {
     console.log(data);
-    displayFlygon(data);
+    displayZapdos(data);
 });
 
-function displayFlygon(data){
+function displayZapdos(data){
 const name = data.name;
 const number = data.id;
 const sprite = data.sprites.versions["generation-i"];
 
-document.getElementById("flygon").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
+document.getElementById("zapdos").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
 document.getElementById("name5").innerHTML = name;
-document.getElementById("flygonNumber").innerHTML = number;
+document.getElementById("zapdosNumber").innerHTML = "No: " + number;
 }
 
