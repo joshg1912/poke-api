@@ -17,7 +17,7 @@ document.getElementById("tauros").innerHTML = `<img src=${sprite["red-blue"].fro
 document.getElementById("name").innerHTML = name;
 document.getElementById("taurosNumber").innerHTML = id;
 }
-/*
+
 fetch("https://pokeapi.co/api/v2/pokemon/muk").then((response) => response.json()).then(data => {
     console.log(data);
     displayMuk(data);
@@ -26,9 +26,9 @@ fetch("https://pokeapi.co/api/v2/pokemon/muk").then((response) => response.json(
 function displayMuk(data) {
     const name = data.name;
     const id = data.id;
-    const sprite = data.sprites.front_default;
+    const sprite = data.sprites.versions["generation-i"];
 
-document.getElementById("muk").innerHTML = `<img src="${sprite}">`;
+document.getElementById("muk").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
 document.getElementById("name2").innerHTML = name;
 document.getElementById("mukNumber").innerHTML = id; 
 }
@@ -92,4 +92,4 @@ const sprite = data.sprites.front_default;
 document.getElementById("flygon").innerHTML = `<img src="${sprite}">`;
 document.getElementById("name5").innerHTML = name;
 document.getElementById("flygonNumber").innerHTML = number;
-}*/
+}
