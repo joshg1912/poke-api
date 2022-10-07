@@ -60,5 +60,21 @@ function displayArcanine(data){
 
     document.getElementById("arcanine").innerHTML = `<img src="${sprite}">`;
     document.getElementById("name4").innerHTML = name;
-    document.getElementById("arcanineNumber") = number;
+    document.getElementById("arcanineNumber").innerHTML = number;
+}
+
+
+fetch("https://pokeapi.co/api/v2/pokemon/flygon").then((response) => response.json()).then(data => {
+    console.log(data);
+    displayFlygon(data);
+});
+
+function displayFlygon(data){
+const name = data.name;
+const number = data.id;
+const sprite = data.sprites.front_default;
+
+document.getElementById("flygon").innerHTML = `<img src="${sprite}">`;
+document.getElementById("name5").innerHTML = name;
+document.getElementById("flygonNumber").innerHTML = number;
 }
