@@ -31,5 +31,19 @@ function displayMuk(data) {
 document.getElementById("muk").innerHTML = `<img src="${sprite}">`;
 document.getElementById("name2").innerHTML = name;
 document.getElementById("mukNumber").innerHTML = id; 
-
 }
+
+fetch("https://pokeapi.co/api/v2/pokemon/gyarados").then((response) => response.json()).then(data => {
+    console.log(data);
+    displayGyarados(data);
+});
+
+function displayGyarados(data){
+const name = data.name;
+const number = data.id;
+const sprite = data.sprites.front_default;
+
+document.getElementById("gyarados").innerHTML = `<img src="${sprite}">`;
+document.getElementById("name3").innerHTML = name;
+document.getElementById("gyaradosNumber").innerHTML = number;
+};
