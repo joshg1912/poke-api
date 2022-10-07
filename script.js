@@ -41,9 +41,9 @@ fetch("https://pokeapi.co/api/v2/pokemon/gyarados").then((response) => response.
 function displayGyarados(data){
 const name = data.name;
 const number = data.id;
-const sprite = data.sprites.front_default;
+const sprite = data.sprites.versions["generation-i"];
 
-document.getElementById("gyarados").innerHTML = `<img src="${sprite}">`;
+document.getElementById("gyarados").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
 document.getElementById("name3").innerHTML = name;
 document.getElementById("gyaradosNumber").innerHTML = number;
 };
