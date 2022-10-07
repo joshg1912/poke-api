@@ -55,16 +55,16 @@ fetch("https://pokeapi.co/api/v2/pokemon/arcanine").then((response) => response.
 
 function displayArcanine(data){
     const name = data.name;
-    const sprite = data.sprites.front_default;
+    const sprite = data.sprites.versions["generation-i"];
     const number = data.id;
 
-    document.getElementById("arcanine").innerHTML = `<img src="${sprite}">`;
+    document.getElementById("arcanine").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
     document.getElementById("name4").innerHTML = name;
     document.getElementById("arcanineNumber").innerHTML = number;
 }
 
 
-fetch("https://pokeapi.co/api/v2/pokemon/flygon").then((response) => response.json()).then(data => {
+fetch("https://pokeapi.co/api/v2/pokemon/zapdos").then((response) => response.json()).then(data => {
     console.log(data);
     displayFlygon(data);
 });
@@ -72,24 +72,10 @@ fetch("https://pokeapi.co/api/v2/pokemon/flygon").then((response) => response.js
 function displayFlygon(data){
 const name = data.name;
 const number = data.id;
-const sprite = data.sprites.front_default;
+const sprite = data.sprites.versions["generation-i"];
 
-document.getElementById("flygon").innerHTML = `<img src="${sprite}">`;
+document.getElementById("flygon").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
 document.getElementById("name5").innerHTML = name;
 document.getElementById("flygonNumber").innerHTML = number;
 }
 
-fetch("https://pokeapi.co/api/v2/pokemon/flygon").then((response) => response.json()).then(data => {
-    console.log(data);
-    displayFlygon(data);
-});
-
-function displayFlygon(data){
-const name = data.name;
-const number = data.id;
-const sprite = data.sprites.front_default;
-
-document.getElementById("flygon").innerHTML = `<img src="${sprite}">`;
-document.getElementById("name5").innerHTML = name;
-document.getElementById("flygonNumber").innerHTML = number;
-}
