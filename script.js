@@ -47,3 +47,8 @@ document.getElementById("gyarados").innerHTML = `<img src="${sprite}">`;
 document.getElementById("name3").innerHTML = name;
 document.getElementById("gyaradosNumber").innerHTML = number;
 };
+
+fetch("https://pokeapi.co/api/v2/pokemon/arcanine").then((response) => response.json()).then(data => {
+    console.log(data);
+    displayArcanine(data);
+})
