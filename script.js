@@ -79,3 +79,17 @@ document.getElementById("name5").innerHTML = name;
 document.getElementById("zapdosNumber").innerHTML = "No: " + number;
 }
 
+fetch("https://pokeapi.co/api/v2/pokemon/exeggutor").then((response) => response.json()).then(data => {
+    console.log(data);
+    displayExeggutor(data);
+});
+
+function displayExeggutor(data){
+const name = data.name;
+const number = data.id;
+const sprite = data.sprites.versions["generation-i"];
+
+document.getElementById("exeggutor").innerHTML = `<img src="${sprite["red-blue"].front_default}">`;
+document.getElementById("name6").innerHTML = name;
+document.getElementById("exeggutorNumber").innerHTML = "No: " + number;
+}
