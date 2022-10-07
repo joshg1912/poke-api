@@ -51,4 +51,14 @@ document.getElementById("gyaradosNumber").innerHTML = number;
 fetch("https://pokeapi.co/api/v2/pokemon/arcanine").then((response) => response.json()).then(data => {
     console.log(data);
     displayArcanine(data);
-})
+});
+
+function displayArcanine(data){
+    const name = data.name;
+    const sprite = data.sprites.front_default;
+    const number = data.id;
+
+    document.getElementById("arcanine").innerHTML = `<img src="${sprite}">`;
+    document.getElementById("name4").innerHTML = name;
+    document.getElementById("arcanineNumber") = number;
+}
