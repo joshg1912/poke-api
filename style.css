@@ -3,9 +3,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5%;
     align-items: center;
-    min-height: 85vh;
+    min-height: 75vh;
 }
 
 .pokemon-container {
     text-align: center;
+    border: 2px solid black;
+    border-radius: 500px;
 }
